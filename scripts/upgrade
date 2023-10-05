@@ -41,6 +41,7 @@ ynh_script_progression --message="Upgrading system configurations related to $ap
 
 ynh_add_nginx_config
 
+env_path="$PATH"
 ynh_add_systemd_config
 
 yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
