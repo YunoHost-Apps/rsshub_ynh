@@ -41,7 +41,7 @@ env_path="$PATH"
 # Create a dedicated systemd config
 ynh_add_systemd_config
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
 
 #=================================================
 # APP INITIAL CONFIGURATION
