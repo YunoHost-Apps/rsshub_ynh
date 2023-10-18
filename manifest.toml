@@ -4,24 +4,23 @@ packaging_format = 2
 
 id = "rsshub"
 name = "RSSHub"
-description.en = "Explain in *a few (10~15) words* the purpose of the app or what it actually does (it is meant to give a rough idea to users browsing a catalog of 100+ apps)"
-description.fr = "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+description.en = "Extensible RSS feed aggregator"
+description.fr = "Agrégateur de flux RSS extensible"
 
-version = "1.0~ynh1"
+version = "2023.10.18~ynh1"
 
-maintainers = ["johndoe"]
+maintainers = ["eric_G"]
 
 [upstream]
 license = "MIT"
-website = "https://example.com"
-demo = "https://demo.example.com"
+website = "https://docs.rsshub.app/"
 admindoc = "https://docs.rsshub.app/install/"
 code = "https://github.com/DIYgod/RSSHub"
 
 [integration]
 yunohost = ">= 11.2"
 architectures = "all"
-multi_instance = true
+multi_instance = false
 
 ldap = false
 
@@ -44,15 +43,14 @@ ram.runtime = "50M"
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/DIYgod/RSSHub/archive/67d4a7ed3f877a8ceac6caebe874c4ce5c210bd8.tar.gz"
-        sha256 = "6f30e0a44ad480a6f87e3f0ba82571bca11c0dadb23edd85f9c4120230a306ec"
-        autoupdate.strategy = "latest_github_tag"
+        url = "https://github.com/DIYgod/RSSHub/archive/c136303759f8b951e8a53193d7355d3e4af238e1.tar.gz"
+        sha256 = "881f2617ab7a17903f7f2248807e5d733f4eb57e470c5ab43143693d47d90ce5"
+        autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
+        autoupdate.strategy = "latest_github_commit"
 
     [resources.system_user]
 
     [resources.install_dir]
-
-    #[resources.data_dir]
 
     [resources.permissions]
     main.url = "/"
