@@ -19,7 +19,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything. RSSHub can be used with browser extension RSSHub Radar and mobile auxiliary app RSSBud (iOS) and RSSAid (Android)
 
 
-**Shipped version:** 2023.10.25~ynh1
+**Shipped version:** 2023.10.26~ynh1
 
 ## Screenshots
 
@@ -30,6 +30,7 @@ RSSHub is an open source, easy to use, and extensible RSS feed generator. It's c
 * Official app website: <https://docs.rsshub.app/>
 * Official admin documentation: <https://docs.rsshub.app/install/>
 * Upstream app code repository: <https://github.com/DIYgod/RSSHub>
+* YunoHost Store: <https://apps.yunohost.org/app/rsshub>
 * Report a bug: <https://github.com/YunoHost-Apps/rsshub_ynh/issues>
 
 ## Developer info
