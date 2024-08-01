@@ -5,7 +5,7 @@
 
 # YunoHost 上的 RSSHub
 
-[![集成程度](https://dash.yunohost.org/integration/rsshub.svg)](https://dash.yunohost.org/appci/app/rsshub) ![工作状态](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![集成程度](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
 
 [![使用 YunoHost 安装 RSSHub](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 
