@@ -59,7 +59,6 @@ ram.runtime = "50M"
     main.default = 1200
 
     [resources.apt]
-    packages = ""
     extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
     extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
     extras.yarn.packages = "yarn"
