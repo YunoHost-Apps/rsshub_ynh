@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # RSSHub YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/rsshub.svg)](https://dash.yunohost.org/appci/app/rsshub) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
 
 [![Instalatu RSSHub YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 
