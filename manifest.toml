@@ -7,7 +7,7 @@ name = "RSSHub"
 description.en = "Extensible RSS feed aggregator"
 description.fr = "Agrégateur de flux RSS extensible"
 
-version = "2023.12.29~ynh1"
+version = "2023.12.29~ynh2"
 
 maintainers = []
 
