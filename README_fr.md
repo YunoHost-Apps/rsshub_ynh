@@ -5,7 +5,7 @@ Il NE doit PAS être modifié à la main.
 
 # RSSHub pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/rsshub.svg)](https://dash.yunohost.org/appci/app/rsshub) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![Niveau d’intégration](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
 
 [![Installer RSSHub avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 
@@ -19,7 +19,7 @@ Il NE doit PAS être modifié à la main.
 RSSHub est un générateur de flux RSS open source, facile à utiliser et extensible. Il est capable de générer des flux RSS à partir d'à peu près tout. RSSHub peut être utilisé avec l'extension de navigateur RSSHub Radar et l'application mobile auxiliaire RSSBud (iOS) et RSSAid (Android)
 
 
-**Version incluse :** 2023.12.29~ynh1
+**Version incluse :** 2023.12.29~ynh2
 
 ## Captures d’écran
 
