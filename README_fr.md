@@ -19,7 +19,7 @@ Il NE doit PAS être modifié à la main.
 RSSHub est un générateur de flux RSS open source, facile à utiliser et extensible. Il est capable de générer des flux RSS à partir d'à peu près tout. RSSHub peut être utilisé avec l'extension de navigateur RSSHub Radar et l'application mobile auxiliaire RSSBud (iOS) et RSSAid (Android)
 
 
-**Version incluse :** 2023.12.29~ynh1
+**Version incluse :** 2023.12.29~ynh2
 
 ## Captures d’écran
 
