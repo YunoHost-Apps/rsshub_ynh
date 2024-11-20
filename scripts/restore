@@ -19,6 +19,11 @@ ynh_script_progression "Reinstalling dependencies..."
 
 ynh_nodejs_install
 
+pushd $install_dir
+	# Reinstalling pnpm
+ 	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+popd
+
 #=================================================
 # RESTORE THE PHP-FPM CONFIGURATION
 #=================================================
