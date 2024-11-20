@@ -60,9 +60,9 @@ yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$a
 #=================================================
 
 pushd $install_dir
- 	ynh_use_nodejs
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn i --production
-	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn build --production
+ 	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+	ynh_hide_warnings pnpm i
+	ynh_hide_warnings pnpm build
 popd
 
 #=================================================
