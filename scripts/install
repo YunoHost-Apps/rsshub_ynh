@@ -15,7 +15,7 @@ source /usr/share/yunohost/helpers
 ynh_script_progression --message="Installing dependencies..." --weight=7
 
 # Install Nodejs
-ynh_exec_warn_less ynh_install_nodejs --nodejs_version=$nodejs_version
+ynh_nodejs_install
 
 #=================================================
 # APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
