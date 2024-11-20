@@ -43,7 +43,7 @@ yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$a
 #=================================================
 ynh_script_progression "Starting a systemd service..."
 
-ynh_systemctl --service_name=$app --action="start"
+ynh_systemctl --service=$app --action="start"
 
 #=================================================
 # END OF SCRIPT
