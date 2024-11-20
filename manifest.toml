@@ -37,7 +37,12 @@ ram.runtime = "50M"
 
     [install.init_main_permission]
     type = "group"
+    ask.en = "Your RSS reader may not work if your instance isn't public"
     default = "visitors"
+
+    [install.access_key]
+    type = "string"
+    ask.en = "Access key to protect your RSS fields"
 
 [resources]
 

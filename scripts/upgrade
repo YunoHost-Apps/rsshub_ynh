@@ -33,6 +33,8 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 
 ynh_config_add_nginx
 
+ynh_add_config --template=".env" --destination="$install_dir/.env"
+
 env_path="$PATH"
 ynh_config_add_systemd
 
