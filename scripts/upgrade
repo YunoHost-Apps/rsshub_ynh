@@ -36,6 +36,16 @@ ynh_config_add_systemd
 yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
 
 #=================================================
+# INSTALL APPLICATION
+#=================================================
+
+pushd $install_dir
+ 	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+	ynh_hide_warnings pnpm i
+	ynh_hide_warnings pnpm build
+popd
+
+#=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting a systemd service..."
