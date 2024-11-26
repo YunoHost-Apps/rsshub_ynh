@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # RSSHub untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/rsshub)](https://ci-apps.yunohost.org/ci/apps/rsshub/)
+![Status kerja](https://apps.yunohost.org/badge/state/rsshub)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/rsshub)
 
 [![Pasang RSSHub dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 
@@ -19,7 +21,7 @@ Ini TIDAK boleh diedit dengan tangan.
 RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything. RSSHub can be used with browser extension RSSHub Radar and mobile auxiliary app RSSBud (iOS) and RSSAid (Android)
 
 
-**Versi terkirim:** 2023.12.29~ynh2
+**Versi terkirim:** 2024.11.20~ynh1
 
 ## Tangkapan Layar
 

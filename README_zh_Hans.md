@@ -5,7 +5,9 @@
 
 # YunoHost 上的 RSSHub
 
-[![集成程度](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/rsshub)](https://ci-apps.yunohost.org/ci/apps/rsshub/)
+![工作状态](https://apps.yunohost.org/badge/state/rsshub)
+![维护状态](https://apps.yunohost.org/badge/maintained/rsshub)
 
 [![使用 YunoHost 安装 RSSHub](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 
@@ -19,7 +21,7 @@
 RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything. RSSHub can be used with browser extension RSSHub Radar and mobile auxiliary app RSSBud (iOS) and RSSAid (Android)
 
 
-**分发版本：** 2023.12.29~ynh2
+**分发版本：** 2024.11.20~ynh1
 
 ## 截图
 

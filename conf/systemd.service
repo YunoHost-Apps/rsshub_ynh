@@ -6,10 +6,10 @@ After=network.target
 Type=simple
 User=__APP__
 Group=__APP__
-Environment="PATH=__ENV_PATH__"
+Environment="PATH=__PATH_WITH_NODEJS__"
 Environment="NODE_ENV=production"
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=/usr/bin/yarn start
+ExecStart=__NODEJS_DIR__/pnpm start
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these
