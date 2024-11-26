@@ -5,7 +5,9 @@
 
 # RSSHub для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/rsshub)](https://ci-apps.yunohost.org/ci/apps/rsshub/)
+![Состояние работы](https://apps.yunohost.org/badge/state/rsshub)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/rsshub)
 
 [![Установите RSSHub с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 

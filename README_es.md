@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # RSSHub para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/rsshub)](https://ci-apps.yunohost.org/ci/apps/rsshub/)
+![Estado funcional](https://apps.yunohost.org/badge/state/rsshub)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/rsshub)
 
 [![Instalar RSSHub con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 

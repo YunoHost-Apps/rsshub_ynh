@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # RSSHub untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/rsshub.svg)](https://ci-apps.yunohost.org/ci/apps/rsshub/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/rsshub.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/rsshub.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/rsshub)](https://ci-apps.yunohost.org/ci/apps/rsshub/)
+![Status kerja](https://apps.yunohost.org/badge/state/rsshub)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/rsshub)
 
 [![Pasang RSSHub dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=rsshub)
 
