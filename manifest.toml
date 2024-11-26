@@ -7,7 +7,7 @@ name = "RSSHub"
 description.en = "Extensible RSS feed aggregator"
 description.fr = "Agrégateur de flux RSS extensible"
 
-version = "2023.12.29~ynh1"
+version = "2024.11.20~ynh1"
 
 maintainers = []
 
@@ -18,7 +18,7 @@ admindoc = "https://docs.rsshub.app/install/"
 code = "https://github.com/DIYgod/RSSHub"
 
 [integration]
-yunohost = ">= 11.2.18"
+yunohost = ">= 11.2.30"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = false
@@ -39,13 +39,17 @@ ram.runtime = "50M"
     type = "group"
     default = "visitors"
 
+    [install.access_key]
+    type = "string"
+    ask.en = "Access key to protect your RSS fields"
+
 [resources]
 
     [resources.sources]
 
         [resources.sources.main]
-        url = "https://github.com/DIYgod/RSSHub/archive/1fb2ddf7cf8d8ef2dd8664c53d933ebcfa804484.tar.gz"
-        sha256 = "b5dfb8c51e1e4ae0423dc2a718c2fe69b864f1dca95ce84222ac22cd554eb3a6"
+        url = "https://github.com/DIYgod/RSSHub/archive/7e5502f1617d390efd3d4b338823313c5bc1bd9a.zip"
+        sha256 = "e7c74a2d3158fb0c551125fa6e6754e548c36f94c29fde8be59455e9b5ad26ba"
         #autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
         #autoupdate.strategy = "latest_github_commit"
 
@@ -60,7 +64,6 @@ ram.runtime = "50M"
     main.default = 1200
 
     [resources.apt]
-    packages = ""
     extras.yarn.repo = "deb https://dl.yarnpkg.com/debian/ stable main"
     extras.yarn.key = "https://dl.yarnpkg.com/debian/pubkey.gpg"
     extras.yarn.packages = "yarn"

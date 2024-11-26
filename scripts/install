@@ -8,64 +8,46 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Installing dependencies..."
 
-# Install Nodejs
 ynh_nodejs_install
 
-#=================================================
-# APP "BUILD" (DEPLOYING SOURCES, VENV, COMPILING ETC)
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-# Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$install_dir"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R $app:www-data "$install_dir"
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
 
-# Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_config_add_nginx
 
 env_path="$PATH"
-# Create a dedicated systemd config
 ynh_config_add_systemd
 
 yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
 
 #=================================================
-# APP INITIAL CONFIGURATION
-#=================================================
-# ADD A CONFIGURATION
-#=================================================
-# ynh_script_progression "Adding $app's configuration..."
-
-# ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
-
-# #REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 400 "$install_dir/some_config_file"
-# #REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown $app:$app "$install_dir/some_config_file"
-
-#=================================================
-# SETUP APPLICATION WITH CURL
+# INSTALL APPLICATION
 #=================================================
 
 pushd $install_dir
-
-	ynh_hide_warnings ynh_exec_as_app node_load_PATH yarn --production
+ 	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+	ynh_hide_warnings pnpm i
+	ynh_hide_warnings pnpm build
 popd
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression "Starting $app's systemd service..."
+ynh_script_progression "Starting a systemd service..."
 
-# Start a systemd service
-ynh_systemctl --service=$app --action="start" --log_path="systemd"
+ynh_systemctl --service="$app" --action="start"
 
 #=================================================
 # END OF SCRIPT
 #=================================================
+
 ynh_script_progression "Installation of $app completed"
