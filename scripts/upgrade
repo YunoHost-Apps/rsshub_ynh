@@ -22,9 +22,7 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir"
-
-chown -R $app:www-data "$install_dir"
+ynh_setup_source --dest_dir="$install_dir" --keep=".env"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
@@ -33,12 +31,19 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 
 ynh_config_add_nginx
 
-ynh_config_add --template=".env" --destination="$install_dir/.env"
-
-env_path="$PATH"
 ynh_config_add_systemd
 
 yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
+
+#=================================================
+# INSTALL APPLICATION
+#=================================================
+
+pushd $install_dir
+ 	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
+	ynh_hide_warnings pnpm i
+	ynh_hide_warnings pnpm build
+popd
 
 #=================================================
 # START SYSTEMD SERVICE
