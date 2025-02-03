@@ -31,8 +31,9 @@ ynh_config_add_systemd
 yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
 
 #=================================================
-# SETUP APPLICATION WITH CURL
+# SETUP APPLICATION
 #=================================================
+ynh_script_progression "Installing $app..."
 
 pushd $install_dir
     ynh_hide_warnings ynh_exec_as_app npm install
