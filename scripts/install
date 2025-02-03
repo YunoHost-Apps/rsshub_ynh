@@ -35,9 +35,8 @@ yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$a
 #=================================================
 
 pushd $install_dir
-    ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-    ynh_hide_warnings pnpm install
-    ynh_hide_warnings pnpm run build
+    ynh_hide_warnings ynh_exec_as_app npm install
+    ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
 #=================================================
