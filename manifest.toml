@@ -24,6 +24,7 @@ architectures = "all"
 multi_instance = false
 
 ldap = false
+
 sso = false
 
 disk = "50M"
@@ -47,11 +48,11 @@ ram.runtime = "50M"
 
     [resources.sources]
 
-        [resources.sources.main]
-        url = "https://github.com/DIYgod/RSSHub/archive/ecdacdd09f0a095b98d483d4a2f73821f8cb390c.zip"
-        sha256 = "1db48343a7f3fb70d7a4f2034ab2d5aac71944a35343d16c48f85d129d2dcd51"
-        #autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
-        #autoupdate.strategy = "latest_github_commit"
+    [resources.sources.main]
+    url = "https://github.com/DIYgod/RSSHub/archive/ecdacdd09f0a095b98d483d4a2f73821f8cb390c.zip"
+    sha256 = "1db48343a7f3fb70d7a4f2034ab2d5aac71944a35343d16c48f85d129d2dcd51"
+    #autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
+    #autoupdate.strategy = "latest_github_commit"
 
     [resources.system_user]
 
