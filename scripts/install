@@ -1,7 +1,15 @@
 #!/bin/bash
 
+#=================================================
+# IMPORT GENERIC HELPERS
+#=================================================
+
 source _common.sh
 source /usr/share/yunohost/helpers
+
+#=================================================
+# INITIALIZE AND STORE SETTINGS
+#=================================================
 
 #=================================================
 # INSTALL DEPENDENCIES
@@ -17,37 +25,47 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-chown -R $app:www-data "$install_dir"
+#=================================================
+# APP INITIAL CONFIGURATION
+#=================================================
+ynh_script_progression "Adding $app's configuration files..."
+
+ynh_config_add --template=".env" --destination="$install_dir/.env"
+
+chmod 400 "$install_dir/.env"
+chown "$app:$app" "$install_dir/.env"
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
 
+# Create a dedicated NGINX config using the conf/nginx.conf template
 ynh_config_add_nginx
 
-ynh_config_add --template=".env" --destination="$install_dir/.env"
-
-env_path="$PATH"
+# Create a dedicated systemd config
 ynh_config_add_systemd
-
 yunohost service add $app --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
 
+# Use logrotate to manage application logfile(s)
+ynh_config_add_logrotate
+
 #=================================================
-# SETUP APPLICATION WITH CURL
+# SETUP APPLICATION
 #=================================================
+ynh_script_progression "Installing $app..."
 
 pushd $install_dir
- 	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-	ynh_hide_warnings pnpm i
-	ynh_hide_warnings pnpm build
+    ynh_hide_warnings ynh_exec_as_app npm install
+    ynh_hide_warnings ynh_exec_as_app npm run build
 popd
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression "Starting a systemd service..."
+ynh_script_progression "Starting $app's systemd service..."
 
+# Start a systemd service
 ynh_systemctl --service="$app" --action="start"
 
 #=================================================

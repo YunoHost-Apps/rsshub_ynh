@@ -21,7 +21,7 @@ Hij mag NIET handmatig aangepast worden.
 RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything. RSSHub can be used with browser extension RSSHub Radar and mobile auxiliary app RSSBud (iOS) and RSSAid (Android)
 
 
-**Geleverde versie:** 2024.11.20~ynh1
+**Geleverde versie:** 2025.02.03~ynh1
 
 ## Schermafdrukken
 
