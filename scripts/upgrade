@@ -51,16 +51,6 @@ pushd $install_dir
 popd
 
 #=================================================
-# INSTALL APPLICATION
-#=================================================
-
-pushd $install_dir
- 	ynh_hide_warnings corepack enable && corepack prepare pnpm@latest --activate
-	ynh_hide_warnings pnpm i
-	ynh_hide_warnings pnpm build
-popd
-
-#=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
