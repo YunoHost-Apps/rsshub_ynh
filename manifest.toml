@@ -50,8 +50,8 @@ ram.runtime = "600M"
     [resources.sources.main]
     url = "https://github.com/DIYgod/RSSHub/archive/8cec7a7de059f4b770f19c103ed3a56192c50061.zip"
     sha256 = "69bad30fccab86c92e86b162175dbd12a5c3e3d1c2923a632fd7662793c981b5"
-    #autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
-    #autoupdate.strategy = "latest_github_commit"
+    autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
+    autoupdate.strategy = "latest_github_commit"
 
     [resources.system_user]
 
