@@ -46,8 +46,11 @@ ynh_config_add_logrotate
 ynh_script_progression "Installing $app..."
 
 pushd $install_dir
-    ynh_hide_warnings ynh_exec_as_app npm install
-    ynh_hide_warnings ynh_exec_as_app npm run build
+    corepack enable
+    ynh_hide_warnings corepack prepare  pnpm@latest --activate
+
+    ynh_hide_warnings ynh_exec_as_app pnpm i
+    ynh_hide_warnings ynh_exec_as_app CI=true pnpm build
 popd
 
 #=================================================
