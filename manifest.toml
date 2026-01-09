@@ -7,7 +7,7 @@ name = "RSSHub"
 description.en = "Extensible RSS feed aggregator"
 description.fr = "Agrégateur de flux RSS extensible"
 
-version = "2025.02.03~ynh1"
+version = "2026.01.09~ynh1"
 
 maintainers = []
 
@@ -26,9 +26,9 @@ multi_instance = false
 ldap = false
 sso = false
 
-disk = "1500M"
-ram.build = "700M"
-ram.runtime = "500M"
+disk = "100M"
+ram.build = "800M"
+ram.runtime = "600M"
 
 [install]
     [install.domain]
@@ -48,10 +48,10 @@ ram.runtime = "500M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/DIYgod/RSSHub/archive/ecdacdd09f0a095b98d483d4a2f73821f8cb390c.zip"
-    sha256 = "1db48343a7f3fb70d7a4f2034ab2d5aac71944a35343d16c48f85d129d2dcd51"
-    autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
-    autoupdate.strategy = "latest_github_commit"
+    url = "https://github.com/DIYgod/RSSHub/archive/8cec7a7de059f4b770f19c103ed3a56192c50061.zip"
+    sha256 = "69bad30fccab86c92e86b162175dbd12a5c3e3d1c2923a632fd7662793c981b5"
+    #autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
+    #autoupdate.strategy = "latest_github_commit"
 
     [resources.system_user]
 
@@ -61,6 +61,7 @@ ram.runtime = "500M"
     main.url = "/"
 
     [resources.ports]
+    main.default = 1200
 
     [resources.nodejs]
     version = "22"

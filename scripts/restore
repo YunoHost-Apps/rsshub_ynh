@@ -14,13 +14,14 @@ ynh_script_progression "Restoring the app main directory..."
 ynh_restore "$install_dir"
 
 #=================================================
-# RESTORE SYSTEM CONFIGURATIONS
+# RESTORE THE PHP-FPM CONFIGURATION
 #=================================================
 ynh_script_progression "Restoring system configurations related to $app..."
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/etc/systemd/system/$app.service"
+
 systemctl enable "$app.service" --quiet
 
 yunohost service add "$app" --description="RSS feed aggregator" --log="/var/log/$app/$app.log"
