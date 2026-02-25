@@ -7,7 +7,7 @@ name = "RSSHub"
 description.en = "Extensible RSS feed aggregator"
 description.fr = "Agrégateur de flux RSS extensible"
 
-version = "2026.02.15~ynh1"
+version = "2026.02.23~ynh1"
 
 maintainers = []
 
@@ -48,8 +48,8 @@ ram.runtime = "600M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://github.com/DIYgod/RSSHub/archive/ef17fa97a893a575f0a08b78d8a5270fc42aaf09.tar.gz"
-    sha256 = "cfd93b00a75638bf8e113cf2b7a475f4bdd00670e10f4cfa437555c4cadfeefd"
+    url = "https://github.com/DIYgod/RSSHub/archive/27e743f37adc37a307c9b082716e29e69e249a39.tar.gz"
+    sha256 = "4d2e393dcabae27e6137fab8eab08ba2f2021832fcc6ac5e1561e7081344fe0f"
     autoupdate.upstream = "https://github.com/DIYgod/RSSHub"
     autoupdate.strategy = "latest_github_commit"
 
